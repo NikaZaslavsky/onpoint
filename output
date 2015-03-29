@@ -4,23 +4,23 @@
 <title>Location and Event</title>
 
 
-<script src="jquery-1.11.2.min.js">
-
-$(document).ready(function() {
-        var imageLinks = $('a[href$=".png"], a[href$=".jpg"], a[href$=".gif"], a[href$=".bmp"]');
-        if (imageLinks.children('img').length) {
-            imageLinks.children('img').each(function() {
-                var currentTitle = $(this).attr('title');
-                $(this).attr('title', currentTitle + ' (click to enlarge image)');
-            });
-            imageLinks.click(function(e) {
-                e.preventDefault();
-                $(this).children('img').toggleClass('expanded');
-            });
-        }
-    });
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$(".box").click(function(){
+      
+      $( this ).css( "height", "452px" );});});
+$(document).ready(function(){
+$(".box").click(function(){
+      
+$(this).css("width", "250px");});
+});
 </script>
+
+
 <style type="text/css">
+
+
 
 body {
    background-image: url(http://static.tumblr.com/92562a7aa5a36ebd581a2f5660f994f5/mdkn7z9/BXlmmsu1s/tumblr_static_bg-grad_fill2.jpg); background-size:120%
@@ -121,9 +121,10 @@ img.expanded {
 </form>
 <center>
 <h1>New Providence, NJ</h1>
-<a><img src="http://i.imgur.com/EDnmMXn.png" class="box"></img></a>
-<a><img src="http://i.imgur.com/jVWSHSh.png"class="box"></img></a>
-<a><img src="http://i.imgur.com/cWIx5uP.png"class="box"></img></a>
+
+<img src="http://i.imgur.com/EDnmMXn.png" class="box"></img>
+<img src="http://i.imgur.com/jVWSHSh.png"class="box"></img>
+<img src="http://i.imgur.com/cWIx5uP.png"class="box"></img>
 <div>
   
 <br><br>
@@ -156,4 +157,4 @@ img.expanded {
 </a>
 </center>
 </body>
-</html>	
+</html>						
