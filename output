@@ -21,54 +21,159 @@ $(this).css("width", "250px");});
 <style type="text/css">
 
 
+body{
+  margin      : 0;
+  padding     : 1.5em;
+  font-family : Georgia,Utopia,Charter,serif;
+}
+
+.example{
+  margin-bottom : 1.5em;
+}
+
+input[type=checkbox]:not(old),
+input[type=radio   ]:not(old){
+  width     : 2em;
+  margin    : 0;
+  padding   : 0;
+  font-size : 1em;
+  opacity   : 0;
+}
+
+input[type=checkbox]:not(old) + label,
+input[type=radio   ]:not(old) + label{
+  display      : inline-block;
+  margin-left  : -2em;
+  line-height  : 1.5em;
+}
+
+input[type=checkbox]:not(old) + label > span,
+input[type=radio   ]:not(old) + label > span{
+  display          : inline-block;
+  width            : 0.875em;
+  height           : 0.875em;
+  margin           : 0.25em 0.5em 0.25em 0.25em;
+  border           : 0.0625em solid rgb(192,192,192);
+  border-radius    : 0.25em;
+  background       : rgb(224,224,224);
+  background-image :    -moz-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :     -ms-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :      -o-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image : -webkit-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :         linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  vertical-align   : bottom;
+}
+
+input[type=checkbox]:not(old):checked + label > span,
+input[type=radio   ]:not(old):checked + label > span{
+  background-image :    -moz-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :     -ms-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :      -o-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image : -webkit-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :         linear-gradient(rgb(224,224,224),rgb(240,240,240));
+}
+
+input[type=checkbox]:not(old):checked + label > span:before{
+  content     : '&#10003;';
+  display     : block;
+  width       : 1em;
+  color       : rgb(153,204,102);
+  font-size   : 0.875em;
+  line-height : 1em;
+  text-align  : center;
+  text-shadow : 0 0 0.0714em rgb(115,153,77);
+  font-weight : bold;
+}
+
+input[type=radio]:not(old):checked +  label > span > span{
+  display          : block;
+  width            : 0.5em;
+  height           : 0.5em;
+  margin           : 0.125em;
+  border           : 0.0625em solid rgb(115,153,77);
+  border-radius    : 0.125em;
+  background       : rgb(153,204,102);
+  background-image :    -moz-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :     -ms-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :      -o-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image : -webkit-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :         linear-gradient(rgb(179,217,140),rgb(153,204,102));
+}
 
 body {
    background-image: url(http://static.tumblr.com/92562a7aa5a36ebd581a2f5660f994f5/mdkn7z9/BXlmmsu1s/tumblr_static_bg-grad_fill2.jpg); background-size:120%
 }
 	
-	#tfnewsearch{
-		float:right;
-		padding:20px;
-	}
-	.tftextinput{
-		margin: 0;
-		padding: 5px 15px;
-		font-family: Arial, Helvetica, sans-serif;
-		font-size:14px;
-		border:1px solid #0076a3; border-right:0px;
-		border-top-left-radius: 5px 5px;
-		border-bottom-left-radius: 5px 5px;
-	}
-	.tfbutton {
-		margin: 0;
-		padding: 5px 15px;
-		font-family: Arial, Helvetica, sans-serif;
-		font-size:14px;
-		outline: none;
-		cursor: pointer;
-		text-align: center;
-		text-decoration: none;
-		color: #ffffff;
-		border: solid 1px #0076a3; border-right:0px;
-		background: #0095cd;
-		background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
-		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
-		border-top-right-radius: 5px 5px;
-		border-bottom-right-radius: 5px 5px;
-	}
-	.tfbutton:hover {
-		text-decoration: none;
-		background: #007ead;
-		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
-		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
-	}
-	/* Fixes submit button height problem in Firefox */
-	.tfbutton::-moz-focus-inner {
-	  border: 0;
-	}
-	.tfclear{
-		clear:both;
-	}
+	@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
+
+body {
+	background: #DDD;
+	font-size: 10px;
+}
+#wrap {
+  margin: 20px 40px;
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  float: right;
+  padding: 0;
+  position: relative;
+}
+
+input[type="text"] {
+  height: 30px;
+  font-size: 25px;
+  display: inline-block;
+  font-family: "Lato";
+  font-weight: 100;
+  border: none;
+  outline: none;
+  color: #555;
+  padding: 3px;
+  padding-right: 60px;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  z-index: 3;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  cursor: pointer;
+}
+
+input[type="text"]:focus:hover {
+  border-bottom: 1px solid #BBB;
+}
+
+input[type="text"]:focus {
+  width: 400px;
+  z-index: 1;
+  border-bottom: 1px solid #BBB;
+  cursor: text;
+}
+input[type="submit"] {
+  height: 47px;
+  width: 43px;
+  display: inline-block;
+  color:red;
+  float: right;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRFU1NT9fX1lJSUXl5e1dXVfn5+c3Nz6urqv7+/tLS0iYmJqampn5+fysrK39/faWlp////Vi4ZywAAABF0Uk5T/////////////////////wAlrZliAAABLklEQVR42rSWWRbDIAhFHeOUtN3/ags1zaA4cHrKZ8JFRHwoXkwTvwGP1Qo0bYObAPwiLmbNAHBWFBZlD9j0JxflDViIObNHG/Do8PRHTJk0TezAhv7qloK0JJEBh+F8+U/hopIELOWfiZUCDOZD1RADOQKA75oq4cvVkcT+OdHnqqpQCITWAjnWVgGQUWz12lJuGwGoaWgBKzRVBcCypgUkOAoWgBX/L0CmxN40u6xwcIJ1cOzWYDffp3axsQOyvdkXiH9FKRFwPRHYZUaXMgPLeiW7QhbDRciyLXJaKheCuLbiVoqx1DVRyH26yb0hsuoOFEPsoz+BVE0MRlZNjGZcRQyHYkmMp2hBTIzdkzCTc/pLqOnBrk7/yZdAOq/q5NPBH1f7x7fGP4C3AAMAQrhzX9zhcGsAAAAASUVORK5CYII=) center center no-repeat;
+  text-indent: -10000px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity .4s ease;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
 
 .box {
 
@@ -110,16 +215,14 @@ img.expanded {
 </head>
 
 <body>
-	<div id="tfheader">
-		<form id="tfnewsearch" method="get" action="http://anniezhou123.netii.net/Fashion%20Help/input.php"
->
-		        <input type="text" placeholder="New Providence, NJ" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="Search" class="tfbutton">
-		</form>
-	<div class="tfclear"></div>
-	</div>
-
+<div id="wrap">
+  <form action="">
+  <input id="search" name="search" type="text" placeholder="New Providence, NJ"><input id="search_submit" value="Rechercher" type="submit">
+  </form>
+</div>
 </form>
 <center>
+<br><br><br><br><br><br>
 <h1>New Providence, NJ</h1>
 
 <img src="http://i.imgur.com/EDnmMXn.png" class="box"></img>
@@ -130,27 +233,32 @@ img.expanded {
 <br><br>
 
 <h1> Where are you going?</h1>
+<div class="example">
+      <div>
+        <input id="radio1" type="radio" name="radio" value="1" checked="checked"><label for="radio1"><span><span></span></span>Normal Day</label>
+      </div>
+      <div>
+        <input id="radio2" type="radio" name="radio" value="2"><label for="radio2"><span><span></span></span>Prom</label>
+      </div>
+      <div>
+        <input id="radio3" type="radio" name="radio" value="3"><label for="radio3"><span><span></span></span>Club/Party</label>
+      </div>
+<div>
+        <input id="radio4" type="radio" name="radio" value="4"><label for="radio4"><span><span></span></span>Casual Outing</label>
+      </div>
+<div>
+        <input id="radio5" type="radio" name="radio" value="5"><label for="radio5"><span><span></span></span>Formal/Business Outing</label>
+      </div>
+    </div>
 
-<form>
-<input type="radio" name="type" value="Normal Day" checked>Normal Day
-<br>
-<input type="radio" name="type" value="Club" >Club
-<br>
-<input type="radio" name="type" value="Prom" >Prom
-<br>
-<input type="radio" name="type" value="Casual Other" >Casual Other
-<br>
-<input type="radio" name="type" value="Formal Other">Formal Other
-<br>
-</form>
 <h1>Time of Day?</h1>
-<form>
-<input type="radio" name="time" value="Day" checked>Day
-<br>
-<input type="radio" name="time" value="Night" >Night
-<br>
-</form>
-</div>
+<div>
+        <input id="radio1" type="radio" name="radio2" value="1" checked="checked"><label for="radio1"><span><span></span></span>Day</label>
+      </div>
+      <div>
+        <input id="radio2" type="radio" name="radio2" value="2"><label for="radio2"><span><span></span></span>Night</label>
+      </div>
+     </div>
 <br><br>
 <a href="">
 <button style="padding: 10px 20px 11px !important; font-size: 21px !important; background-color: #f36c8c; font-weight: bold; text-shadow: 1px 1px #F36C8C; color: #ffffff; border-radius: 100px; -moz-border-radius: 100px; -webkit-border-radius: 100px; border: 1px solid #F36C8C; cursor: pointer; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;" type="button">Generate Outfit</button>
