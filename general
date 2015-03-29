@@ -1,4 +1,73 @@
-<!doctype HTML>
+<!DOCTYPE html>
+<html>
+<title>On Point</title>
 <head>
-<title>
+<style>
+
+body {background-image: url("http://31.media.tumblr.com/tumblr_lohfv31E8z1qciek8o1_500.jpg"); background-size:100%; background-color:rgba(255,0,0,0.5);
+}
+#one {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 600px;
+    //overflow: hidden;
+    text-align:center;
+    padding-top: 330px;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+opacity: 0.5;
+}
+
+li {
+    float: left;
+    
+
+}
+
+.two:link, .two:visited {
+    display: block;
+    width: 120px;
+    font-weight: bold;
+    font-family: "Georgia", Arial, serif;
+    text-align: center;
+    color: #000000;
+    background-color: #DFFFBF;
+    
+    padding-top: 36px;
+    padding-left:56px;
+    padding-right:56px;
+    padding-bottom:36px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.two:hover, .two:active {
+    background-color: #99FF66;
+    
+} 
+
+
+</style>
 </head>
+
+<body>
+
+<!--<center><img src="http://25.media.tumblr.com/tumblr_lywomojwxg1r0fxy7o1_500.jpg" height="700px" width="1200px"></img></center>-->
+
+<br>
+<center>
+<div>
+
+<ul id="one" >
+  <li><a href="http://anniezhou123.netii.net/Fashion%20Help/input.php" class="two">Start</a></li>
+  </ul>
+
+</div>
+</center>
+<br>
+<br>
+
+
+</body>
+</html>							
