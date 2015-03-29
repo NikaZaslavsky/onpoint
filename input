@@ -4,7 +4,7 @@
 <head>
 <style type="text/css">
 body {
-    background-color: #E6FFE6;
+   background-image: url(http://static.tumblr.com/92562a7aa5a36ebd581a2f5660f994f5/mdkn7z9/BXlmmsu1s/tumblr_static_bg-grad_fill2.jpg); background-size:120%
 }
 	
 	#tfnewsearch{
@@ -55,24 +55,14 @@ body {
 
 <body>
 	<div id="tfheader">
-		<form id="tfnewsearch" method="get">
-		        <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+		<form id="tfnewsearch" method="get" action="http://anniezhou123.netii.net/Fashion%20Help/input2.php"
+>
+		        <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="Search" class="tfbutton">
 		</form>
 	<div class="tfclear"></div>
 	</div>
 
 </form>
-<?php
 
-$ch = curl_init("http://forecast.weather.gov/MapClick.php?lat=29.26034686&lon=-91.46038359&unit=0&lg=english&FcstType=text&TextType=1");
-
-curl_setopt($ch, CURLOPT_HEADER, false);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
-$content = curl_exec($ch);
-curl_close($ch);
-echo $content;
-
-?>
 </body>
 </html>
