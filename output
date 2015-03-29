@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Location and Event</title>
+
+
+<script src="jquery-1.11.2.min.js">
+
+$(document).ready(function() {
+        var imageLinks = $('a[href$=".png"], a[href$=".jpg"], a[href$=".gif"], a[href$=".bmp"]');
+        if (imageLinks.children('img').length) {
+            imageLinks.children('img').each(function() {
+                var currentTitle = $(this).attr('title');
+                $(this).attr('title', currentTitle + ' (click to enlarge image)');
+            });
+            imageLinks.click(function(e) {
+                e.preventDefault();
+                $(this).children('img').toggleClass('expanded');
+            });
+        }
+    });
+</script>
+<style type="text/css">
+
+body {
+   background-image: url(http://static.tumblr.com/92562a7aa5a36ebd581a2f5660f994f5/mdkn7z9/BXlmmsu1s/tumblr_static_bg-grad_fill2.jpg); background-size:120%
+}
+	
+	#tfnewsearch{
+		float:right;
+		padding:20px;
+	}
+	.tftextinput{
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		border:1px solid #0076a3; border-right:0px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+	}
+	.tfbutton {
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3; border-right:0px;
+		background: #0095cd;
+		background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+	}
+	.tfbutton:hover {
+		text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
+
+.box {
+
+  width: 200px;
+  height: 400px;
+  float: center;
+  
+  margin: 10px;
+}
+.box:hover{
+  width: 250px;
+  /* This is 52px total. 1/2 of that is for top and the other half is for bottom. */
+  height: 452px;
+  /* Below we are not using -26px for margin-top because .box has 6px border and 10px margin. */
+  /* That 16px is then divide by 2 since it's for both top and bottom, or 8px per side. */
+  /* Having said that, 26px - 8px is 18px. We need negative value to position it correctly. */
+  margin-top: -18px;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+img.expanded {
+    max-width: none;
+}
+img {
+    height: auto;
+    max-width: 640px;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+img.expanded {
+    max-width: 2000px;
+}
+</style>
+</head>
+
+<body>
+	<div id="tfheader">
+		<form id="tfnewsearch" method="get" action="http://anniezhou123.netii.net/Fashion%20Help/input.php"
+>
+		        <input type="text" placeholder="New Providence, NJ" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="Search" class="tfbutton">
+		</form>
+	<div class="tfclear"></div>
+	</div>
+
+</form>
+<center>
+<h1>New Providence, NJ</h1>
+<a><img src="http://i.imgur.com/EDnmMXn.png" class="box"></img></a>
+<a><img src="http://i.imgur.com/jVWSHSh.png"class="box"></img></a>
+<a><img src="http://i.imgur.com/cWIx5uP.png"class="box"></img></a>
+<div>
+  
+<br><br>
+
+<h1> Where are you going?</h1>
+
+<form>
+<input type="radio" name="type" value="Normal Day" checked>Normal Day
+<br>
+<input type="radio" name="type" value="Club" >Club
+<br>
+<input type="radio" name="type" value="Prom" >Prom
+<br>
+<input type="radio" name="type" value="Casual Other" >Casual Other
+<br>
+<input type="radio" name="type" value="Formal Other">Formal Other
+<br>
+</form>
+<h1>Time of Day?</h1>
+<form>
+<input type="radio" name="time" value="Day" checked>Day
+<br>
+<input type="radio" name="time" value="Night" >Night
+<br>
+</form>
+</div>
+<br><br>
+<a href="">
+<button style="padding: 10px 20px 11px !important; font-size: 21px !important; background-color: #f36c8c; font-weight: bold; text-shadow: 1px 1px #F36C8C; color: #ffffff; border-radius: 100px; -moz-border-radius: 100px; -webkit-border-radius: 100px; border: 1px solid #F36C8C; cursor: pointer; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;" type="button">Generate Outfit</button>
+</a>
+</center>
+</body>
+</html>	
